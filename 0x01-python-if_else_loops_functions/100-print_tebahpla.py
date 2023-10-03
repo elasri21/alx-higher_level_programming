@@ -7,4 +7,4 @@ while i < len(letters) - 1:
     res += letters[i]
     res += chr(ord(letters[i + 1]) - 32)
     i += 2
-print(res, end="")
+print("{}".format(res), end="")
