@@ -3,7 +3,7 @@ def max_integer(my_list=[]):
     if isinstance(my_list, list):
         if len(my_list) == 0:
             return (None)
-        max_int = 0
+        max_int = my_list[0]
         for n in my_list:
             if n > max_int:
                 max_int = n
