@@ -1,6 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "lists.h"
+
+/**
+ * rev_list - reverses a list
+ * @head: list head
+ * Return: node of type listint_t
+ */
+listint_t *rev_list(listint_t **head)
+{
+listint_t *curr = *head, *nextN, *prev = NULL;
+while (curr)
+{
+nextN = curr->next;
+curr->next = prev;
+prev = curr;
+curr = nextN;
+}
+*head = prev;
+return (*head);
+}
 /**
  * is_palindrome - checks if a linked list is palindrome
  * @head: head of the list
@@ -8,35 +27,32 @@
  */
 int is_palindrome(listint_t **head)
 {
-listint_t *front_l;
-int length = 0, j = 0;
-front_l = *head;
-while (front_l != NULL)
+listint_t *tmp, *opp, *cnt;
+size_t size = 0, i;
+if (*head == NULL || (*head)->next == NULL)
+return (1);
+tmp = *head;
+while (tmp)
 {
-length++;
-front_l = front_l->next;
+size++;
+tmp = tmp->next;
 }
-if (length > 0)
-{
-int ns[length], i = 0, h = length - 1;
-front_l = *head;
-while (front_l != NULL)
-{
-ns[j] = front_l->n;
-j++;
-front_l = front_l->next;
-}
-while (i < h)
-{
-if (ns[i] != ns[h])
+tmp = *head;
+for (i = 0; i < (size / 2) - 1; i++)
+tmp = tmp->next;
+if ((size % 2) == 0 && tmp->n != tmp->next->n)
 return (0);
-else
+tmp = tmp->next->next;
+opp = rev_list(&tmp);
+cnt = opp;
+tmp = *head;
+while (opp)
 {
-i++;
-h--;
-continue;
+if (tmp->n != opp->n)
+return (0);
+tmp = tmp->next;
+opp = opp->next;
 }
-}
-}
+rev_list(&cnt);
 return (1);
 }
