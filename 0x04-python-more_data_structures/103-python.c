@@ -1,11 +1,7 @@
 #include <stdio.h>
 #include <Python.h>
-/**
- * print_python_bytes - print info about py bytes
- * @p: python object
- * Return: void
- */
 void print_python_bytes(PyObject *p);
+void print_python_list(PyObject *p);
 /**
  * print_python_list - print info about py lists
  * @p: python object
@@ -29,7 +25,11 @@ if (PyBytes_check(p_o))
 print_python_bytes(p_o);
 }
 }
-
+/**
+ * print_python_bytes - print info about py bytes
+ * @p: python object
+ * Return: void
+ */
 void print_python_bytes(PyObject *p)
 {
 char *st;
