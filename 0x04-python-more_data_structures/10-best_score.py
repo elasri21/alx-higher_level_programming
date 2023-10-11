@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    if len(list(a_dictionary.keys())) == 0:
-        return (None)
     if a_dictionary:
+        if len(list(a_dictionary.keys())) == 0:
+            return (None)
         vs = []
         ks = []
         for k, v in a_dictionary.items():
