@@ -5,3 +5,5 @@ def multiply_by_2(a_dictionary):
         for k, v in a_dictionary.items():
             new_dic[k] = 2 * v
         return (new_dic)
+    else:
+        return ({})
