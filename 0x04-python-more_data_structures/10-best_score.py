@@ -3,11 +3,8 @@ def best_score(a_dictionary):
     if a_dictionary:
         if len(list(a_dictionary.keys())) == 0:
             return (None)
-        vs = []
-        ks = []
-        for k, v in a_dictionary.items():
-            vs.append(v)
-            ks.append(k)
+        vs = list(a_dictionary.values())
+        ks = list(a_dictionary.keys())
         max_s = vs[0]
         k_max = ""
         for i in range(0, len(vs)):
