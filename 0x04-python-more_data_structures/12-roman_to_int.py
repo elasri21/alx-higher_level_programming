@@ -6,6 +6,8 @@ def fix_list(nums):
         if max_n > i:
             s1 += i
     return (max_n - s1)
+
+
 def roman_to_int(roman_string):
     if not roman_string:
         return (0)
