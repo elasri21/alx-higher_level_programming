@@ -44,7 +44,7 @@ PyListObject *p_l;
 PyObject *p_o;
 s = ((PyVarObject *)(p))->ob_size;
 p_l = (PyListObject *)p;
-printf("[*] Python list info\n";
+printf("[*] Python list info\n");
 printf("[*] Size of thePython List = %ld\n", s);
 printf("[*] Allocated = %ld\n", p_l->allocated);
 for (i = 0; i < s; i++)
