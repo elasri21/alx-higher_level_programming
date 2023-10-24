@@ -35,7 +35,7 @@ class Square:
         def area(self):
             """ Calculates the square area
             Return: square area"""
-            return (self.__size ** 2)
+            return (self.__size * self.__size)
 
     @property
     def position(self):
