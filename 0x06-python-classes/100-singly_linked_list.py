@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-
-"""Defines Node that creates a singly linked list"""
+"""Defines a class Node that creates a singly linked list"""
 
 
 class Node:
@@ -13,7 +12,7 @@ class Node:
             data: data part
             next_node: pointer to next node"""
         self.data = data
-        self.next_node = nex_node
+        self.next_node = next_node
 
     @property
     def data(self):
@@ -39,12 +38,12 @@ class Node:
         """Set the next node pointer
         Args:
             ptr: pointer to next node in the list"""
-        if not isinstance(ptr, Node) and ptr in not None:
+        if not isinstance(ptr, Node) and ptr is not None:
             raise TypeError("next_node must be a Node object")
         self.__next_node = ptr
 
 
-def SinglyLinkedList:
+class SinglyLinkedList:
     """Defines a singly linked list from the Node class"""
     def __init__(self):
         """Initialize a new list"""
