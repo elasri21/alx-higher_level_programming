@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""In this module there is a class called Node
-that creates a singly linked list
-"""
+"""Defines Node that creates a singly linked list"""
 
 
 class Node:
