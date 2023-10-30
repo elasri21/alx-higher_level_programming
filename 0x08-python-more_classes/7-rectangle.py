@@ -52,7 +52,6 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-
     def area(self):
         """calculates and return the rectangle area"""
         return (self.__width * self.__height)
@@ -69,10 +68,10 @@ class Rectangle:
             return ""
         rect = []
         for i in range(self.__height):
-            row = []
+            row = ""
             for j in range(self.__width):
-                row.append(self.print_symbol)
-            rect.append("".join(row))
+                row += "".join(self.print_symbol)
+            rect.append(row)
         return ("\n".join(rect))
 
     def __repr__(self):
@@ -83,5 +82,3 @@ class Rectangle:
         """inform that an instance was deleted"""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
-
-
