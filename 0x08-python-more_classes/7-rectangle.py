@@ -6,8 +6,10 @@ class Rectangle:
     """defines a rectangle"""
 
     number_of_instances = 0
+    """integer represents the number of instances"""
 
-    print_symbol = "#"
+    print_symbol = '#'
+    """String character"""
 
     def __init__(self, width=0, height=0):
         """initialize a new instance
@@ -69,7 +71,7 @@ class Rectangle:
         for i in range(self.__height):
             row = []
             for j in range(self.__width):
-                row.append(Rectangle.print_symbol)
+                row.append(self.print_symbol)
             rect.append("".join(row))
         return ("\n".join(rect))
 
