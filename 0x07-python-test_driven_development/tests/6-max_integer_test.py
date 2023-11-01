@@ -16,7 +16,7 @@ class maxIntegerTester(unittest.TestCase):
 
     def test_empty_list(self):
         """check if list passed is empty"""
-        self.assertEquaal(max_integer([]), None)
+        self.assertEqual(max_integer([]), None)
 
     def test_single_el(self):
         """check if list has only one element"""
@@ -251,7 +251,7 @@ class maxIntegerTester(unittest.TestCase):
             max_integer(98)
 
     def test_float(self):
-        with self.assertraises(TypeError):
+        with self.assertRaises(TypeError):
             max_integer(9.8)
 
 
