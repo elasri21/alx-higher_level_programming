@@ -36,11 +36,11 @@ def matrix_mul(m_a, m_b):
             if type(num) not in (int, float):
                 raise TypeError("m_b should contain only integers or floats")
     for l_ch in m_a:
-            if len(l_ch) != len(m_a[0]):
-                raise TypeError("each row of m_a must be of the same size")
+        if len(l_ch) != len(m_a[0]):
+            raise TypeError("each row of m_a must be of the same size")
     for l_ch in m_b:
-            if len(l_ch) != len(m_b[0]):
-                raise TypeError("each row of m_b must be of the same size")
+        if len(l_ch) != len(m_b[0]):
+            raise TypeError("each row of m_b must be of the same size")
     if len(m_a[0]) != len(m_b):
         raise ValueError("m_a and m_b can't be multiplied")
     new_matrix = [[] for i in range(len(m_a))]
