@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""contains an empty a function that checks if
+"""contains a function that checks if
 an object is inherited from a class"""
 
 
@@ -11,7 +11,7 @@ def inherits_from(obj, a_class):
         a_class: The class to check against
     Return: True if so. False otherwise"""
 
-if type(obj) is a_class:
+    if type(obj) is a_class:
         return (False)
     elif isinstance(obj, a_class):
         return (True)
