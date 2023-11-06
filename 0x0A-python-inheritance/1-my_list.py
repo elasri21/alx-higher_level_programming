@@ -7,6 +7,8 @@ class MyList(list):
     Args:
         list: the list object"""
 
+    pass
+
     def print_sorted(self):
         """uses the copy and sort methods from list object
         and print a sorted list
