@@ -8,9 +8,5 @@ class MyList(list):
 
     def print_sorted(self):
         """uses sorted method to print a list"""
-        print(sorted(list(self)))
-
-
-if __name__ == '__main__':
-    import doctest
-    doctest.testfile("tests/1-my_list.txt")
+        new_list = sorted(self)
+        print(new_list)
