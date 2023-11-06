@@ -10,7 +10,7 @@ def is_same_class(obj, a_class):
         a_class: class to check
     Return: True if so. False otherwise"""
 
-    if dir(obj) == dir(a_class):
+    if type(obj) is a_class and dir(obj) == dir(a_class):
         return (True)
     else:
         return (False)
