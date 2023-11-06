@@ -14,7 +14,7 @@ class BaseGeometry:
         Args:
             name: shape name
             value: an intege"""
-        if value in None:
+        if value is None:
             raise TypeError("{} must be an integer".format(name))
         if not isinstance(value, int):
             raise TypeError("{} must be an integer".format(name))
