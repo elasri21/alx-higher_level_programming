@@ -8,7 +8,6 @@ class MyList(list):
 
     def print_sorted(self):
         """uses the copy and sort methods from list object
-        and print a sorted list
-        Return: nothing"""
+        and print a sorted list"""
 
         print(sorted(list(self)))
