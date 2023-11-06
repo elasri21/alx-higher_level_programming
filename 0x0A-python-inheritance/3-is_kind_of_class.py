@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""contains a function that checks if an
+object is a kind of class"""
 
 
 def is_kind_of_class(obj, a_class):
