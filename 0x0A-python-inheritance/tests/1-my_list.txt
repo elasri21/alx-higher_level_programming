@@ -64,7 +64,7 @@ Numbers:
    >>> my_list.append(None)
    >>> my_list.print_sorted()
    Traceback (most recent call last):
-   TypeError: unorderable types: NoneType() < int()
+   TypeError: '<' not supported between instances of 'NoneType' and 'int'
 
 :: wiht NULL value
    >>> my_list.append(NULL)
