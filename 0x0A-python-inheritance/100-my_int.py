@@ -3,6 +3,8 @@
 
 
 class MyInt(int):
+    """A class that inherits from int"""
+
     def __eq__(self, other):
         """dreverse the useul behavior
         Args:
