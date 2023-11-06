@@ -10,7 +10,7 @@ def is_kind_of_class(obj, a_class):
         obj: the object to check
         a_class: the class to check against
     Return: True is so. False otherwise"""
-    
+
     if isinstance(obj, a_class):
         return (True)
     else:
