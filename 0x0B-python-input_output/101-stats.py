@@ -11,7 +11,7 @@ st = {'200': 0, '301': 0, '400': 0, '401': 0, '403': 0,
 
 def display():
     """displays the result"""
-    print("File size: {}".format(size))
+    print(f"File size: {size}")
     for k, v in sorted(st.items()):
         if v > 0:
             print("{:s}: {:d}".format(k, v))
