@@ -11,7 +11,6 @@ def append_after(filename="", search_string="", new_string=""):
         search_string: the string pattern to look for
         new_string: new string to insert"""
     with open(filename, "r") as f_name:
-        line = f_name.readline()
         list_lines = []
         while True:
             line = f_name.readline()
