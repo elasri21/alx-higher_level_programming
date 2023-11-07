@@ -10,7 +10,7 @@ def append_after(filename="", search_string="", new_string=""):
         filename: the file name
         search_string: the string pattern to look for
         new_string: new string to insert"""
-    with open(filename, "w+") as f_name:
+    with open(filename, "r") as f_name:
         lines = f_name.readlines()
         list_lines = []
         for ln in lines:
@@ -19,5 +19,6 @@ def append_after(filename="", search_string="", new_string=""):
                 list_lines.append("\n".join(new_string))
             else:
                 list_lines.append(ln)
+    with open(filename, "w") as f_name:
         for new_line in list_line:
             f_name.write(new_line)
