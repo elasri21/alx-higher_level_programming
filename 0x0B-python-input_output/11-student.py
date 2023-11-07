@@ -35,6 +35,6 @@ class Student:
         """replaces all attributes of the Student instance
         Args:
             json: json data"""
-        for k,v in json.items():
+        for k, v in json.items():
             if k in self.__dict__.keys():
                 self.__dict__[k] = v
