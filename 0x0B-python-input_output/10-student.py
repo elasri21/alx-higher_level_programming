@@ -23,7 +23,7 @@ class Student:
             for attr in attrs:
                 if type(attr) is not str:
                     return self.__dict__
-        except:
+        except Exception:
             return self.__dict__
 
         new_dict = dict()
