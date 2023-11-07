@@ -21,4 +21,4 @@ def append_after(filename="", search_string="", new_string=""):
                 list_lines.append(ln)
     with open(filename, "w") as f_name:
         for new_line in list_line:
-            f_name.write(new_line)
+            f_name.writelines(new_line)
