@@ -16,9 +16,9 @@ def append_after(filename="", search_string="", new_string=""):
             line = f_name.readline()
             if line == "":
                 break
-            list_lines.append(line + "\n")
+            list_lines.append(line)
             if search_string in line:
-                list_lines.append(new_string)
+                list_lines.append(new_string + "\n")
     with open(filename, "w", encoding='utf-8') as f_name:
         for new_line in list_line:
             f_name.writelines(new_line)
