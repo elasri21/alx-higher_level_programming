@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""contains a function that writes into a file"""
 
 
 def write_file(filename="", text=""):
@@ -7,5 +8,5 @@ def write_file(filename="", text=""):
         filename: the file name
         text: text to write to the file
     Return: the number of character that are been witten"""
-    with open(filename, "w") as file:
-        return (file.write(text))
+    with open(filename, "w") as f_name:
+        return (f_name.write(text))
