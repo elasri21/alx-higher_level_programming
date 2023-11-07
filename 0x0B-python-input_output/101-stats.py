@@ -6,14 +6,16 @@ from sys import stdin
 size = 0
 j = 0
 st = {'200': 0, '301': 0, '400': 0, '401': 0, '403': 0,
-      '404': 0,'405': 0, '500': 0}
+      '404': 0, '405': 0, '500': 0}
+
 
 def display():
     """displays the result"""
     print("File size: {}".format(size))
-    for k,v in sorted(st.items()):
+    for k, v in sorted(st.items()):
         if v > 0:
             print("{:s}: {:d}".format(k, v))
+
 
 try:
     for ln in stdin:
