@@ -14,5 +14,5 @@ try:
     old_content = load_from_json_file("add_item.json")
 except Exception:
     old_content = []
-old_content.extend(arg_list)
+old_content = old_content + arg_list
 save_to_json_file(old_content, "add_item.json")
