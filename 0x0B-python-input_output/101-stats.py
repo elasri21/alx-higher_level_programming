@@ -20,7 +20,7 @@ def display():
 try:
     for ln in stdin:
         list_ln = ln.split()
-        if len(list_ln) >= 0:
+        if len(list_ln) >= 2:
             sta = list_ln[-2]
             size += int(list_ln[-1])
             if sta in st:
