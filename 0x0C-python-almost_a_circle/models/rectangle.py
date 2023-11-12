@@ -137,3 +137,9 @@ class Rectangle(Base):
                 self.x = kwargs["x"]
             if "y" in props:
                 self.y = kwargs["y"]
+
+    def to_dictionary(self):
+        """get a dictionary from the instance attributes
+        Return: a dictinary"""
+        return {"id": self.id, "width": self.width, "height": self.height,
+                "x": self.x, "y": self.y}
