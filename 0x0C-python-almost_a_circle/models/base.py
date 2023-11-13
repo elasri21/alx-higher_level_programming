@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Contains the Base class"""
 import json
+import csv
 
 
 class Base:
@@ -79,5 +80,45 @@ class Base:
                 content = f_name.read()
                 ls = [list_o for list_o in cls.from_json_string(content)]
                 return [cls.create(**{k: v for k, v in d.items()}) for d in ls]
+        except FileNotFoundError:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """serializes in SCV
+        Args:
+            cls: class
+            list_objs: list of objects"""
+        file_name = cls.__name__ + ".csv"
+        with open(file_name, "w", newline='') as f_name:
+            titles = []
+            if cls.__name__ == "Rectangle":
+                titles = ["id", "width", "height", "x", "y"]
+            elif cls.__name__ == "Square":
+                titles = ["id", "size", "x", "y"]
+            writer = csv.DictWriter(f_name, fieldnames=titles)
+            writer.writeheader()
+            for obj in list_objs:
+                # writer.writerow(vars(obj))
+                if cls.__name__ == "Rectangle":
+                    data = {"id": obj.id, "width": obj.width,
+                            "height": obj.height, "x": obj.x, "y": obj.y}
+                elif cls.__name__ == "Square":
+                    data = {"id": obj.id, "size": obj.size,
+                            "x": obj.x, "y": obj.y}
+                writer.writerow(data)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """deserializes in CSV
+        Args:
+            cls: class"""
+        file_name = cls.__name__ + ".csv"
+        try:
+            with open(file_name, "r") as f_name:
+                content = csv.DictReader(f_name)
+                titles = content.fieldnames
+                desr_data = [obj for obj in content]
+                return [cls.create(**{k: int(v) for k, v in d.items()}) for d in desr_data]
         except FileNotFoundError:
             return []
