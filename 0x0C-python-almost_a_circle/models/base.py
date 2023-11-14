@@ -128,3 +128,36 @@ class Base:
                 ]
         except FileNotFoundError:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """draws rectangles and squares
+        Args:
+            list_rectangles: list of rectangles
+            list_squares:list of squares"""
+        import turtle
+        turtle.hideturtle()
+        turtle.setup(400, 400)
+        turtle.bgcolor("red")
+        turtle.pensize(5)
+        turtle.speed(3)
+        for rec in list_rectangles:
+            turtle.penup()
+            turtle.goto(rec.x, rec.y)
+            turtle.pendown()
+            turtle.color("blue")
+            turtle.goto(rec.x + rec.width, rec.y)
+            turtle.goto(rec.x + rec.width,
+                        rec.y + rec.height)
+            turtle.goto(rec.x, rec.y + rec.height)
+            turtle.goto(rec.x, rec.y)
+        for sr in list_squares:
+            turtle.penup()
+            turtle.goto(sr.x, sr.y)
+            turtle.pendown()
+            turtle.color("green")
+            turtle.goto(sr.x + sr.size, sr.y)
+            turtle.goto(sr.x + sr.size,
+                        sr.y + sr.size)
+            turtle.goto(sr.x, sr.y + sr.size)
+            turtle.goto(sr.x, sr.y)
