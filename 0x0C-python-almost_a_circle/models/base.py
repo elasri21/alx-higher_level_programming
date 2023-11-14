@@ -64,7 +64,7 @@ class Base:
             cls: the class
             dictionary: dictionary containing properties of cls
         Return: an instance with all attributes already set"""
-        dummy = cls(1, 1)
+        dummy = cls(1, 1, 0, 0)
         dummy.update(**dictionary)
         return dummy
 
