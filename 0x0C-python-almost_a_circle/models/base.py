@@ -118,7 +118,10 @@ class Base:
             with open(file_name, "r") as f_name:
                 content = csv.DictReader(f_name)
                 titles = content.fieldnames
-                desr_data = [obj for obj in content]
-                return [cls.create(**{k: int(v) for k, v in d.items()}) for d in desr_data]
+                data = [obj for obj in content]
+                return [
+                    cls.create(**{k: int(v) for k, v in d.items()})
+                    for d in data
+                ]
         except FileNotFoundError:
             return []
