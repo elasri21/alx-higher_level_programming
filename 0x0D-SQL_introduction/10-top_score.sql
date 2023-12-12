@@ -1,2 +1,2 @@
 -- list all records in the tables second table
-SELECT * FROM second_table;
+SELECT score, name FROM second_table;
