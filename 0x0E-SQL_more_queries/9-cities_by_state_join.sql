@@ -1,3 +1,4 @@
 --  lists all cities contained in the database hbtn_0d_usa
-SELECT id, name AS tmp_table FROM cities WHERE cities.state_id = states.id
-JOIN states.name ON tmp_table ORDER BY cities.id;
+SELECT ct.id, ct.name, st.name
+FROM cities AS ct INNER JOIN states AS st on ct.state_id=st.id
+ORDER BY c.id;
