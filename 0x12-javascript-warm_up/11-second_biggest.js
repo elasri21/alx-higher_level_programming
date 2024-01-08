@@ -10,7 +10,7 @@ if (args.length > 3) {
       nums.push(parseInt(args[i]));
     }
   }
-  if (nums.length >= 2) {
+  if (nums.length === args.length - 2) {
     let max = nums[0];
     let sMax = nums[0];
     for (let i = 0; i < nums.length; i++) {
