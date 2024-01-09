@@ -6,3 +6,4 @@ keys.forEach(k => {
   if (newDict[dict[k]]) newDict[dict[k]].push(k);
   else newDict[dict[k]] = [k];
 });
+console.log(newDict);
