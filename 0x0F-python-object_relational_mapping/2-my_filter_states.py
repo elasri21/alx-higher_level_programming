@@ -14,8 +14,9 @@ if __name__ == "__main__":
         db=args[3],
         charset="utf8")
     cur = conn.cursor()
-    cur.execute("SELECT * FROM states WHERE states.name=%s ORDER BY id ASC",
-                (args[4],))
+    query = "SELECT * FROM states WHERE states.name LIKE '{}' ORDER BY id ASC"
+    query = query.format(args[4])
+    cur.execute(query)
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
