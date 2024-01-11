@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""This module gets all states from a database"""
+"""This module gets a state passws as a fourth
+argumwnt from a database"""
 import MySQLdb
 import sys
 

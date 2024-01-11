@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""This module gets all states from a database"""
+"""This module gets all states starts with N
+from a database"""
 import MySQLdb
 import sys
 
