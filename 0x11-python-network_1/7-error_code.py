@@ -9,10 +9,10 @@ def main():
     """function to be called"""
     url = sys.argv[1]
     res = requests.get(url)
-    text = res.text
-    print(text)
     if res.status_code >= 400:
         print("Error code: {}".format(res.status_code))
+    else:
+        print(res.text)
 
 
 if __name__ == "__main__":
