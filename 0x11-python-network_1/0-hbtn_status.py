@@ -8,9 +8,9 @@ def main():
         data = res.read()
         data_utf = data.decode('utf-8')
         print("Body response:")
-        print("\t - type: {}".format(type(data)))
-        print("\t - content: {}".format(data))
-        print("\t - utf8 content: {}".format(data_utf))
+        print("\t- type: {}".format(type(data)))
+        print("\t- content: {}".format(data))
+        print("\t- utf8 content: {}".format(data_utf))
 
 
 if __name__ == "__main__":
