@@ -2,6 +2,7 @@
 """Contains a script that fetches data from a url"""
 import urllib.request
 
+
 def main():
     """The main function to be called"""
     with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as res:
