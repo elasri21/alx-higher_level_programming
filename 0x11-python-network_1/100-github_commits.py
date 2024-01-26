@@ -6,7 +6,7 @@ import sys
 
 def fetch_commits(repo, owner):
     url = "https://api.github.com/repos/{}/{}/commits".format(owner, repo)
-    res = requests.get(url)    
+    res = requests.get(url)
     if res.status_code == 200:
         commits = res.json()[:10]
         for commit in commits:
