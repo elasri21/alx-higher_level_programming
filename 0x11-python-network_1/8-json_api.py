@@ -13,7 +13,7 @@ def main(args):
     q = ''
     if len(args) >= 2:
         q = args[1]
-    data = {'q': a}
+    data = {'q': q}
     res = requests.post(url, data=data)
     try:
         result = res.json()
@@ -21,7 +21,7 @@ def main(args):
             print("No result")
         else:
             print("[{}] {}".format(result['id'], result['name']))
-    except:
+    except AttributeError:
         print('Not a valid JSON')
 
 
