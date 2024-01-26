@@ -21,7 +21,7 @@ def main(args):
             print("No result")
         else:
             print("[{}] {}".format(result['id'], result['name']))
-    except AttributeError:
+    except ValueError:
         print('Not a valid JSON')
 
 
