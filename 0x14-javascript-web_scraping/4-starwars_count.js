@@ -2,7 +2,9 @@
 const request = require('request');
 const url = process.argv[2];
 request(url, (err, res, body) => {
-  if (res.statusCode === 200) {
+  if (err) {
+    console.log(err);
+  } else {
     let ct = 0;
     const movie = JSON.parse(body).results;
     for (let i = 0; i < movie.length; i++) {
@@ -14,7 +16,5 @@ request(url, (err, res, body) => {
       }
     }
     console.log(ct);
-  } else {
-    console.log(err);
   }
 });
