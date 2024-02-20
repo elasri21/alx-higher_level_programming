@@ -4,7 +4,7 @@ const url = `http://swapi-api.hbtn.io/api/films/${process.argv[2]}`;
 request.get(url, (err, response, body) => {
   if (err) {
     console.log(err);
-  } else  {
+  } else {
     const characters = JSON.parse(body).characters;
     const list = [];
     characters.forEach(character => {
@@ -12,7 +12,7 @@ request.get(url, (err, response, body) => {
         request.get(character, (err, response, body) => {
           if (err) {
             reject(err);
-          } else if (response.statusCode === 200) {
+          } else {
             resolve(JSON.parse(body).name);
           }
         });
