@@ -11,8 +11,8 @@ request(url, (err, res, body) => {
       if (el.completed) {
         if (!agg[el.userId]) {
           agg[el.userId] = 0;
-	}
-	agg[el.userId]++;
+        }
+        agg[el.userId]++;
       }
     });
     console.log(agg);
