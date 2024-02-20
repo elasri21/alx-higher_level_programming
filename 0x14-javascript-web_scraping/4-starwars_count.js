@@ -8,7 +8,7 @@ request(url, (err, res, body) => {
     for (let i = 0; i < movie.length; i++) {
       const chars = movie[i].characters;
       for (let j = 0; j < chars.length; j++) {
-        if (chars[j] === 'https://swapi-api.alx-tools.com/api/films/18/' || chars[j] === 'https://swapi-api.alx-tools.com/api/films/18/') {
+        if (chars[j] === 'https://swapi-api.alx-tools.com/api/people/18/' || chars[j] === 'https://swapi-api.alx-tools.com/api/people/18/') {
           ct++;
         }
       }
