@@ -1,4 +1,4 @@
-document.ready(function ($) {
+$(document).ready(function () {
   const btn = $('#add_item');
   const listItems = $('UL.my_list');
   btn.click(function () {

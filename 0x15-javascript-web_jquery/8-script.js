@@ -1,9 +1,9 @@
-document.ready(function ($) {
+$(document).ready(function () {
   $.getJSON('https://swapi-api.alx-tools.com/api/films/?format=json', function (data) {
-    const tiltes = data.title;
+    const titles = data.results;
     filmTitles = $('UL#list_movies');
-    titles.each(title => {
-      filmTitles.append(`<li>${title}</li>`);
+    titles.forEach(title => {
+      filmTitles.append(`<li>${title.title}</li>`);
     });
   });
 });
