@@ -1,6 +1,8 @@
-$(document).ready(function () {
-  $.getJSON('https://hellosalut.stefanbohacek.dev/?lang=fr', function (data) {
-    const hello = data.hello;
-    $('DIV#hello').text(hello);
+document.addEventListener('DOMContentLoaded', function() {
+  $(document).ready(function () {
+    $.getJSON('https://hellosalut.stefanbohacek.dev/?lang=fr', function (data) {
+      const hello = data.hello;
+      $('DIV#hello').text(hello);
+    });
   });
 });
